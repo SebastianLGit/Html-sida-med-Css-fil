@@ -1,0 +1,115 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Allocate remaining space to the h1 and auto to nav */
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0044cc;
+    color: #ffffff;
+    font-size: 24px; /* Default font size for larger screens */
+}
+
+
+nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Adds some padding around the text */
+    display: block; /* Makes the entire area clickable */
+
+}
+
+nav a.active {
+    background-color: #ffa500; /* Example: Orange background for active link */
+    color: #000000; /* Changes text color to black for contrast */
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates responsive columns */
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+article {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    display: grid;
+    place-items: center; /* Centrera innehållet både horisontellt och vertikalt */
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns if you have three groups of content */
+    justify-content: center;
+    align-items: center;
+    justify-items: center; 
+    padding: 1px 10px;
+    background-color: #333;
+    color: white;
+}
+
+button {
+    background-color: #ffa500; /* Example: Orange background for active link */
+    color: #000000; /* Changes text color to black for contrast */
+    border-radius: 15px; /* Optional: adds rounded corners */
+    padding: 10px 10px;
+    font-size: 1.25rem;
+}
+
+form input[type="text"], form label, form button, form textarea {
+    width: 60%;  /* Ensures consistent width across all form elements */
+}
+
+
+form input[type="submit"] {
+    background-color: #ffa500; /* Example: Orange background for active link */
+    color: #000000; /* Changes text color to black for contrast */
+    border-radius: 15px; /* Optional: adds rounded corners */
+    padding: 10px 10px;
+    font-size: 1.25rem;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        font-size: 12px; /* Reduces the font size on smaller screens */
+    }
+    footer {
+        font-size: 10px; /* Reduces the font size on smaller screens */
+    }
+    body {
+        font-size: 12px; /* Reduces the font size on smaller screens */
+    }
+    button {
+        border-radius: 10px; /* Optional: adds rounded corners */
+        padding: 5px 5px;
+        font-size: 1.0rem;
+    }
+    form input[type="submit"] {
+        border-radius: 10px; /* Optional: adds rounded corners */
+        padding: 5px 5px;
+        font-size: 1.0rem;
+    }
+}
+
